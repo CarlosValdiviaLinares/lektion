@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Level extends Model
 {
     use HasFactory;
+
+    //  Relacion Uno-A-Muchos
+    public function courses(){
+        return $this->hasMany('App\Models\Course');
+    }
 }
